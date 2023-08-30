@@ -6,12 +6,28 @@ import {
   } from "react-router-dom";
 import './index.css'
 
+import Root from "./routes/root";
+import Foo from "./routes/foo";
+import Bar from "./routes/bar";
+import ErrorPage from "./routes/error-page";
+
 
 const router = createBrowserRouter([
     {
       path: "/",
-      element: <div>Hello world!</div>,
+      element: <Root />,
+      errorElement: <ErrorPage />,
     },
+    {
+      path: "/foo",
+      element: <Foo />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/bar",
+      element: <Bar />,
+      errorElement: <ErrorPage />,
+    }
 ]);
 
 
